@@ -1,1 +1,2 @@
-import "normalize-package-data";
+import "normalize.css";
+import $ from "jquery";

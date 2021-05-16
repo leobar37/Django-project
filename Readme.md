@@ -16,7 +16,7 @@ this project has been create to practice:
 
 ## Documentation
 
-not hace docs yet
+[docs](https://www.notion.so/Django-aplication-b7dfb11cd7044223b21fc98a433a0218)
 
 ## Open Source
 
