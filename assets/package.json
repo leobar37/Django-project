@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.1",
+    "normalize.css": "^8.0.1",
     "webpack-bundle-tracker": "^1.0.0"
   }
 }
