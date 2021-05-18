@@ -1,4 +1,4 @@
-from .product import ProductForm
+from .product import ProductForm , CreateBrandForm , CreateCategoryForm
 from .userforms import creationUserForm, changueUserForm
 
 __all__ = [

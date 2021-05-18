@@ -16,12 +16,17 @@ unit = (
 
 
 class Brand(models.Model):
-    name = models.CharField(max_length=150, null=False, verbose_name="Marca")
+    name = models.CharField(max_length=150, null=False, verbose_name="Nombre")
+    
+    def __str__(self):
+        return self.name
 
 
 class Category(models.Model):
     name = models.CharField(max_length=200, null=False,
-                            verbose_name="Categoria")
+                            verbose_name="Nombre")
+    def __str__(self):
+        return self.name
 
 
 class Product(models.Model):

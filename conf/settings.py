@@ -41,12 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # out
     'widget_tweaks',
+    'crispy_forms',
+    'bootstrap_modal_forms',
     # Third party
     "webpack_loader",
     # apps
     'website',
     'dashboard',
-    'crispy_forms'
 ]
 
 AUTH_USER_MODEL = 'dashboard.Usuario'

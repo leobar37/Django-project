@@ -17,8 +17,12 @@
     <!-- buttons-->
     <div class="col-md-6">
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary">Marcas</button>
-        <button type="button" class="btn btn-success">Categorias</button>
+        <button type="button" id="create-brand" class="btn btn-primary">
+          Agregar Marca
+        </button>
+        <button type="button" class="btn btn-success" id="createCategory">
+          Agregar Categoria
+        </button>
       </div>
     </div>
   </div>
@@ -28,16 +32,46 @@
       <!-- Register product-->
       <div class="card">
         <div class="card-body">
-          <form action="post" class="form">
+          <form action="{% url 'productpage' %}" method="post" class="form">
+            {% csrf_token %}
             <!-- prettier-ignore -->
             {{form | crispy}}
 
             <div class="w-100 my-4">
-              <button class="btn btn-primary" type="submit">
-                Guardar product
-              </button>
+              <button class="btn btn-primary">Guardar product</button>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-title p-4">
+          <h3>Lista de Productos</h3>
+        </div>
+        <div>
+          <ul class="list-group">
+            {% for product in products %}
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-md-4">{{product.name}}</div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  <button class="btn btn-danger">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <button class="btn btn-primary">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+            {% empty %}
+            <div>
+              <h3>No has agregado productos todavia</h3>
+            </div>
+            {% endfor %}
+          </ul>
         </div>
       </div>
     </div>
@@ -45,6 +79,18 @@
 </div>
 
 <!-- Endproduct-->
+<!-- creare brand modal-->
+<div
+  class="modal fade"
+  id="create-brand-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
+  </div>
+</div>
 
 {% endblock content %}
 
@@ -53,6 +99,14 @@
 
 <script type="text/javascript" defer aync>
   var product = new Page();
+  $("#create-brand").modalForm({
+    formURL: "{% url 'createbrand' %}",
+    modalID: "#create-brand-modal",
+  });
+  $("#createCategory").modalForm({
+    formURL: "{% url 'createcategory' %}",
+    modalID: "#create-brand-modal",
+  });
 </script>
 
 {% endblock down %}

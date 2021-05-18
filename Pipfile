@@ -8,6 +8,7 @@ django = "*"
 django-webpack-loader = "*"
 django-widget-tweaks = "*"
 django-crispy-forms = "*"
+django-bootstrap-modal-forms = "2.2.0"
 
 [dev-packages]
 autopep8 = "*"
