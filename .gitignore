@@ -21,3 +21,5 @@ assets/bundles/dev
 
 # IDE config
 .vscode
+
+./**/migrations/*.*

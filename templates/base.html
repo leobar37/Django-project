@@ -32,10 +32,19 @@
 
     {% render_bundle 'main' 'css' %}
   </head>
-  <body>
+  <body class="">
     {% block body %} {% endblock %}
 
     <!-- prettier-ignore -->
     {% render_bundle 'main' 'js' %}
+
+  {% block down %}
+  
+
+  {% endblock down %}
+
+    <script src="{% static 'libs/vendors/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/vendors/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'libs/vendors/bootstrap/bootstrap.min.js' %}"></script>
   </body>
 </html>

@@ -59,13 +59,13 @@ module.exports = (env, argv) => {
 
   return {
     mode: argv.mode,
-    entry: "./index.js",
+    entry: "./index.ts",
     output,
     module: {
       rules: [
         // Scripts
         {
-          test: /\.js$/,
+          test: /\.ts$/,
           exclude: /node_modules/,
           loader: "babel-loader",
         },
@@ -107,6 +107,9 @@ module.exports = (env, argv) => {
           },
         },
       ],
+    },
+    resolve: {
+      extensions: [".tsx", ".ts", ".js"],
     },
     plugins: [
       new BundleTracker({

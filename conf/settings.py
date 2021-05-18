@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import sys
 from os import path
 from pathlib import Path
 import os
@@ -38,10 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # out
+    'widget_tweaks',
     # Third party
-    "webpack_loader"
+    "webpack_loader",
+    # apps
+    'website',
+    'dashboard',
 ]
+
+AUTH_USER_MODEL = 'dashboard.Usuario'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,6 +126,9 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 STATICFILES_DIRS = (
     ("bundles", BASE_DIR.joinpath("assets/bundles")),
     ("img",  BASE_DIR.joinpath("assets/img")),
+    ("libs",  BASE_DIR.joinpath("assets/lib")),
+
+
 )
 
 webpack_stats_filename = "webpack-bundle.dev.json"
@@ -149,10 +159,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-import sys
-
-
-
 
 
 # Static files (CSS, JavaScript, Images)

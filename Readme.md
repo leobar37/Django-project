@@ -24,6 +24,11 @@ This project is not open source yet
 
 ## Resources
 
-- [template wepack](https://github.com/fceruti/django-starter-project)
-
+- [template wepack](https://github.com/fceruti/django-starter-project):
   Usage this for inspiration
+
+- [Write your own custom User](https://testdriven.io/blog/django-custom-user-model/#user-model)
+
+## tools
+
+- Bootstrap 4.6
