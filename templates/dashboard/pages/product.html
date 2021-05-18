@@ -1,0 +1,58 @@
+{% extends "dashboard/index.html" %}
+<!-- prettier-ignore -->
+{% load crispy_forms_tags %}
+<!-- prettier-ignore -->
+
+{% block content %}
+
+<!--Header -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Registrar producto</h1>
+</div>
+<!-- End Header-->
+
+<!-- product-->
+<div class="container_fluid">
+  <div class="row my-3">
+    <!-- buttons-->
+    <div class="col-md-6">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Marcas</button>
+        <button type="button" class="btn btn-success">Categorias</button>
+      </div>
+    </div>
+  </div>
+  <!-- -->
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Register product-->
+      <div class="card">
+        <div class="card-body">
+          <form action="post" class="form">
+            <!-- prettier-ignore -->
+            {{form | crispy}}
+
+            <div class="w-100 my-4">
+              <button class="btn btn-primary" type="submit">
+                Guardar product
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Endproduct-->
+
+{% endblock content %}
+
+<!-- prettier-ignore -->
+{% block down %}
+
+<script type="text/javascript" defer aync>
+  var product = new Page();
+</script>
+
+{% endblock down %}

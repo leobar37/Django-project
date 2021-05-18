@@ -3,7 +3,7 @@ from .models import (Product, Brand, Category, Compra,
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from .forms import changueUserForm, creationUserForm
+from .forms import creationUserForm, changueUserForm
 # Register your models here.
 
 from .models import Usuario

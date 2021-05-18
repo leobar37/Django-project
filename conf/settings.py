@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # apps
     'website',
     'dashboard',
+    'crispy_forms'
 ]
 
 AUTH_USER_MODEL = 'dashboard.Usuario'

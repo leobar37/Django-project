@@ -1,5 +1,5 @@
 # TODO
 
-[ ] crear modelo producto
-[ ] crear modelo de empresa
-[ ] registrar datos de prueba
+[x] crear modelo producto
+[x] crear modelo de empresa
+[x] registrar datos de prueba

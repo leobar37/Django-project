@@ -38,13 +38,14 @@
     <!-- prettier-ignore -->
     {% render_bundle 'main' 'js' %}
 
-  {% block down %}
-  
+      {% block down %}
 
-  {% endblock down %}
-
+    
+      {% endblock down %}
+{% comment %}  {% endcomment %}
     <script src="{% static 'libs/vendors/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'libs/vendors/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'libs/vendors/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'libs/vendors/bootstrap/popper.js' %}"></script>
+    <script src="{% static 'libs/vendors/jquery-easing/jquery.easing.min.js' %}"></script>
   </body>
 </html>

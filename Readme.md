@@ -27,7 +27,9 @@ This project is not open source yet
 - [template wepack](https://github.com/fceruti/django-starter-project):
   Usage this for inspiration
 
-- [Write your own custom User](https://testdriven.io/blog/django-custom-user-model/#user-model)
+- **Write rour custom User:\***
+  - [blog](https://testdriven.io/blog/django-custom-user-model/#user-model)
+  - [docs](Write rour custom User:)
 
 ## tools
 
