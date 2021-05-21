@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
 
     switch (env) {
         case "prod":
-            publicPath = "https://example.com/static/bundles/prod/";
+            publicPath = "http://127.0.0.1:8000/static/bundles/prod/";
             outputPath = resolve("bundles/prod");
             break;
         case "stg":

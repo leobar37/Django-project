@@ -133,7 +133,7 @@ STATICFILES_DIRS = (
 
 )
 
-webpack_stats_filename = "webpack-bundle.dev.json"
+webpack_stats_filename = "webpack-bundle.prod.json"
 stats_file = os.path.join(BASE_DIR.joinpath(
     "assets/bundles/"), webpack_stats_filename)
 
