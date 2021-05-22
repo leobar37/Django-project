@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  project:
+    build: .
+    container_name: djangoapp2
+    ports:
+      - "8000:8000"
